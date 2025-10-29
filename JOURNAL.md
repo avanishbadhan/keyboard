@@ -12,3 +12,12 @@ started with keyboard layout on keyboard layout editor, designed a prototype sch
 ![Screenshot 2025-10-26 183958](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTg1NSwicHVyIjoiYmxvYl9pZCJ9fQ==--05e2bad1272ed5ae1ebc3a040ce8410b3c5e5b4e/Screenshot%202025-10-26%20183958.png)
   
 
+## 10/28/2025 - wired up the pcb, switched to nice!nano  
+
+Wired up the PCB, front and back, connecting the diodes and switches, to the nice!nano.
+Made some fixes, may need some more or rework, many design rule errors. 
+Had to fix schematic rows and columns due to mistakes, overlapping wiring.
+
+![Screenshot 2025-10-28 201147](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--961e877c8b8c66a368115934f519da74baab8f4f/Screenshot%202025-10-28%20201147.png)
+  
+
