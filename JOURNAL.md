@@ -21,3 +21,11 @@ Had to fix schematic rows and columns due to mistakes, overlapping wiring.
 ![Screenshot 2025-10-28 201147](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NjQxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--961e877c8b8c66a368115934f519da74baab8f4f/Screenshot%202025-10-28%20201147.png)
   
 
+## 11/3/2025 - created schematic and pcb for number pad  
+
+I created the schematic and pcb design for the number pad macropad I plan to have on the side. I wanted this to be detachable from the main keyboard as I do not use it often. This PCB runs without errors, and I moved to this as it gave me a good start to KiCad as I am new to the software and faced some issues starting off with a big PCB.
+![Screenshot 2025-11-03 191643](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODIyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--813e29749f2372a14592cb7f363b04d952535358/Screenshot%202025-11-03%20191643.png)
+![Screenshot 2025-11-03 191710](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODIyMiwicHVyIjoiYmxvYl9pZCJ9fQ==--0f1c727fa7ffc19619b6027fcf8b57296042b559/Screenshot%202025-11-03%20191710.png)![Screenshot 2025-11-03 191729](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODIyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--ea83909676839db48ccb0d8e816a1eea70f10aff/Screenshot%202025-11-03%20191729.png)
+
+  
+
