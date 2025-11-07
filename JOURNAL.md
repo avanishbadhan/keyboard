@@ -29,3 +29,9 @@ I created the schematic and pcb design for the number pad macropad I plan to hav
 
   
 
+## 11/6/2025 - 3d components and rotary encoder  
+
+I added 3d components such as all the key switches onto both pcbs. I added a rotary encoder on the top right of my 75% keyboard to control volume. Was missing STAB keys on the macropad which I had to fix up. Will need to make both microcontrollers match as one uses raspberry pi pico and the other uses pro micro.
+![Screenshot 2025-11-06 232846](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA3NCwicHVyIjoiYmxvYl9pZCJ9fQ==--2709ae1fc6d25e731979d085c194241734d83a15/Screenshot%202025-11-06%20232846.png)![Screenshot 2025-11-06 232035](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA3NSwicHVyIjoiYmxvYl9pZCJ9fQ==--89121b158ec82d8e2be604958b836f2d145a6202/Screenshot%202025-11-06%20232035.png)
+  
+
