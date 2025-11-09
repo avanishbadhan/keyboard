@@ -41,3 +41,9 @@ Wrapped up both halves(keyboard + macropad) with a TRRS jack on both to connect 
 ![Screenshot 2025-11-08 120801](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTUyNiwicHVyIjoiYmxvYl9pZCJ9fQ==--1c30f2ccfe200ec60f1b615041f59ced7ba7a504/Screenshot%202025-11-08%20120801.png)![Screenshot 2025-11-08 120735](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTUyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--fa97e788652f5afeeef7f2ecc35d2262fc033f42/Screenshot%202025-11-08%20120735.png)
   
 
+## 11/9/2025 - case  
+
+I created a 2 part case on Autodesk Inventor, imported case and pcb, and created an assembly. I spent a bunch of time on CAD and troubleshooting misaligned switch holes. I still need to add holes for mounting, and there is a mismatch between pcb and plate for the stabilizer mounting holes, which I need to fix. 
+![Screenshot 2025-11-09 150542](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--b96baca0c0d35aa5af1f31522ec8b25e71a4d67d/Screenshot%202025-11-09%20150542.png)![Screenshot 2025-11-09 150507](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg2NSwicHVyIjoiYmxvYl9pZCJ9fQ==--92d64c6147385aedd0fe9bb23bdd400fa1287a7c/Screenshot%202025-11-09%20150507.png)![Screenshot 2025-11-09 150442](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg2NiwicHVyIjoiYmxvYl9pZCJ9fQ==--a6e93da54980c8c2f05d249fd0c87ce19e35a1b1/Screenshot%202025-11-09%20150442.png)![Screenshot 2025-11-09 150532](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg2NywicHVyIjoiYmxvYl9pZCJ9fQ==--7f3b22dead0947ec39632f362622546db2c78b73/Screenshot%202025-11-09%20150532.png)
+  
+
