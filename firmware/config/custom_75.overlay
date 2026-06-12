@@ -9,28 +9,28 @@
         diode-direction = "col2row";
 
         row-gpios
-            = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0 (P0.31)
-            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1 (P0.29)
-            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2 (P0.02)
-            , <&gpio1 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3 (P1.01 - Pad 31)
-            , <&gpio1 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW4 (P1.02 - Pad 32)
-            , <&gpio1 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW5 (P1.07 - Pad 33)
+            = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW0
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW1
+            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW2
+            , <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW3
+            , <&pro_micro 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW4
+            , <&pro_micro 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // ROW5
             ;
 
         col-gpios
-            = <&gpio0 6  GPIO_ACTIVE_HIGH> // COL0  (P0.06)
-            , <&gpio0 8  GPIO_ACTIVE_HIGH> // COL1  (P0.08)
-            , <&gpio0 17 GPIO_ACTIVE_HIGH> // COL2  (P0.17)
-            , <&gpio0 20 GPIO_ACTIVE_HIGH> // COL3  (P0.20)
-            , <&gpio0 22 GPIO_ACTIVE_HIGH> // COL4  (P0.22)
-            , <&gpio0 24 GPIO_ACTIVE_HIGH> // COL5  (P0.24)
-            , <&gpio1 0  GPIO_ACTIVE_HIGH> // COL6  (P1.00)
-            , <&gpio0 11 GPIO_ACTIVE_HIGH> // COL7  (P0.11)
-            , <&gpio1 4  GPIO_ACTIVE_HIGH> // COL8  (P1.04)
-            , <&gpio1 6  GPIO_ACTIVE_HIGH> // COL9  (P1.06)
-            , <&gpio1 15 GPIO_ACTIVE_HIGH> // COL10 (P1.15)
-            , <&gpio1 13 GPIO_ACTIVE_HIGH> // COL11 (P1.13)
-            , <&gpio1 11 GPIO_ACTIVE_HIGH> // COL12 (P1.11)
+            = <&pro_micro 1  GPIO_ACTIVE_HIGH> // COL0
+            , <&pro_micro 2  GPIO_ACTIVE_HIGH> // COL1
+            , <&pro_micro 3  GPIO_ACTIVE_HIGH> // COL2
+            , <&pro_micro 4  GPIO_ACTIVE_HIGH> // COL3
+            , <&pro_micro 5  GPIO_ACTIVE_HIGH> // COL4
+            , <&pro_micro 6  GPIO_ACTIVE_HIGH> // COL5
+            , <&pro_micro 7  GPIO_ACTIVE_HIGH> // COL6
+            , <&pro_micro 8  GPIO_ACTIVE_HIGH> // COL7
+            , <&pro_micro 9  GPIO_ACTIVE_HIGH> // COL8
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH> // COL9
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH> // COL10
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH> // COL11
+            , <&pro_micro 13 GPIO_ACTIVE_HIGH> // COL12
             ;
     };
 };
