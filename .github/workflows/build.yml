@@ -4,4 +4,26 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize West Workspace
+        run: |
+          pip3 install west
+          west init -m https://github.com/zmkfirmware/zmk --mr main workspace
+          cd workspace
+          west update
+          west zephyr-export
+
+      - name: Compile Custom 75 Firmware
+        run: |
+          cd workspace/app
+          west build -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
+
+      - name: Archive Production Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom_75_firmware
+          path: workspace/app/build/zephyr/zmk.uf2
