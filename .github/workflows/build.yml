@@ -9,28 +9,43 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Set Up Python Development Environment
+      - name: Cache West Modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            workspace/.west
+            workspace/modules
+            workspace/tools
+            workspace/zephyr
+            workspace/bootloader
+          key: ${{ runner.os }}-zmk-v2-${{ hashFiles('**/build.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-zmk-v2-
+
+      - name: Set Up Python Environment
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install West Core Dependencies
+      - name: Install Core Dependencies
         run: |
           pip install west
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build gperf
+          sudo apt-get install -y cmake ninja-build gperf DFUSuffixed
 
-      - name: Bootstrap Local West Workspace
+      - name: Bootstrap ZMK Workspace
         run: |
-          west init -m https://github.com/zmkfirmware/zmk --mr main workspace
+          if [ ! -d "workspace/.west" ]; then
+            west init -m https://github.com/zmkfirmware/zmk --mr main workspace
+          fi
           cd workspace
           west update
           west zephyr-export
 
-      - name: Cross-Compile Custom 75 Firmware
+      - name: Compile Custom 75 Firmware
         run: |
           cd workspace/app
-          west build -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
+          west build -p always -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
 
       - name: Export Flashable Binary
         uses: actions/upload-artifact@v4
