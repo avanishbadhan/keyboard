@@ -23,7 +23,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: ZMK Build
-        uses: zmkfirmware/zmk-actions-all@v2
+        uses: zmkfirmware/zmk-action@v1
         with:
           board: nice_nano_v2
           shield: custom_75
