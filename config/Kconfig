@@ -1,1 +1,4 @@
-# Custom 75 Keyboard Configuration
+config ZMK_BOARD_COMPAT_NICE_NANO_V2
+    bool
+    default y
+    depends on BOARD_NICE_NANO_V2
