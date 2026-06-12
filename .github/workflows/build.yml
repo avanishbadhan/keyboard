@@ -4,27 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Cache west modules
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-zephyr-modules
-        with:
-          path: |
-            modules/
-            tools/
-            zephyr/
-            bootloader/
-            zmk
-          key: ${{ runner.os }}-build-${{ env.cache-name }}
-
-      - name: ZMK Build
-        uses: zmkfirmware/zmk-action@v1
-        with:
-          board: nice_nano_v2
-          shield: custom_75
-          config_path: firmware/config
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: firmware/config/build.yaml
+      config_path: firmware/config
