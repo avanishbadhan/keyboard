@@ -1,5 +1,1 @@
-if SHIELD_CUSTOM_75
-config ZMK_BOARD_COMPAT_NICE_NANO_V2
-    bool
-    default y
-endif
+# Custom 75 Keyboard Configuration Definition
