@@ -1,3 +1,4 @@
+// Hardware Validation Pass
 / {
     chosen {
         zmk,kscan = &kscan0;
