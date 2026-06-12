@@ -31,7 +31,7 @@ jobs:
         run: |
           pip install west
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build gperf DFUSuffixed
+          sudo apt-get install -y cmake ninja-build gperf dfu-util
 
       - name: Bootstrap ZMK Workspace
         run: |
