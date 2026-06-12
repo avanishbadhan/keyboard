@@ -4,4 +4,36 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Python Development Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install West Core Dependencies
+        run: |
+          pip install west
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build gperf
+
+      - name: Bootstrap Local West Workspace
+        run: |
+          west init -m https://github.com/zmkfirmware/zmk --mr main workspace
+          cd workspace
+          west update
+          west zephyr-export
+
+      - name: Cross-Compile Custom 75 Firmware
+        run: |
+          cd workspace/app
+          west build -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
+
+      - name: Export Flashable Binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: custom_75_firmware
+          path: workspace/app/build/zephyr/zmk.uf2
