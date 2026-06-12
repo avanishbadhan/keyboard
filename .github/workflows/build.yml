@@ -11,15 +11,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Cache West Modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+          key: ${{ runner.os }}-west-modules-${{ hashFiles('config/west.yml') }}
+
       - name: Initialize West Workspace
         run: |
-          west init -l config
+          if [ ! -d ".west" ]; then
+            west init -l config
+          fi
           west update
           west zephyr-export
 
       - name: Compile Custom 75 Firmware
         run: |
-          west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
+          west build -p always -s zmk/app -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
 
       - name: Archive Production Artifacts
         uses: actions/upload-artifact@v4
