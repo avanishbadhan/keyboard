@@ -5,31 +5,24 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-build-arm:stable
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y cmake ninja-build gperf python3-pip python3-setuptools python3-venv
-
       - name: Initialize West Workspace
         run: |
-          python3 -m venv env
-          ./env/bin/pip3 install west
-          ./env/bin/west init -m https://github.com/zmkfirmware/zmk --mr main workspace
-          cd workspace
-          ../env/bin/west update
-          ../env/bin/west zephyr-export
+          west init -l config
+          west update
+          west zephyr-export
 
       - name: Compile Custom 75 Firmware
         run: |
-          cd workspace/app
-          ../../env/bin/west build -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
+          west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=custom_75 -DZMK_CONFIG="${{ github.workspace }}/config"
 
       - name: Archive Production Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: custom_75_firmware
-          path: workspace/app/build/zephyr/zmk.uf2
+          path: build/zephyr/zmk.uf2
